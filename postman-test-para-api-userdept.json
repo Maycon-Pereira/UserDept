@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "f93f2936-448e-4795-a5ea-1df3ee0faa64",
+		"name": "Departments/Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21956618"
+	},
+	"item": [
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "Visibility",
+					"item": [
+						{
+							"name": "dept public",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/department/public/f59e4585-3ce5-484f-b997-17c38e2c4603",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"department",
+										"public",
+										"f59e4585-3ce5-484f-b997-17c38e2c4603"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "dept private",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/department/private/17a20018-b16c-4f61-aa0b-dfa43ad9dee1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"department",
+										"private",
+										"17a20018-b16c-4f61-aa0b-dfa43ad9dee1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cria Departamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Cirurgia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/department",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Departamentos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/department",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza Departamento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Cirurgia Cerebral\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/department/32450da8-9622-4434-a287-eceff2c3b37e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department",
+								"32450da8-9622-4434-a287-eceff2c3b37e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Departamento por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/department/32450da8-9622-4434-a287-eceff2c3b37e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department",
+								"32450da8-9622-4434-a287-eceff2c3b37e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Departamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/department/32450da8-9622-4434-a287-eceff2c3b37e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department",
+								"32450da8-9622-4434-a287-eceff2c3b37e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "User active admin",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/user/active/e5e7a2ca-d785-43f1-aee6-832ede76ffab",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"active",
+										"e5e7a2ca-d785-43f1-aee6-832ede76ffab"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User inactive admin",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/user/inactive/e5e7a2ca-d785-43f1-aee6-832ede76ffab",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"inactive",
+										"e5e7a2ca-d785-43f1-aee6-832ede76ffab"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cria Usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Maycon\",\r\n    \"email\": \"maycon@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuários",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Maycon\",\r\n    \"email\": \"maycon@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/32450da8-9622-4434-a287-eceff2c3b37e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"32450da8-9622-4434-a287-eceff2c3b37e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuário por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/32450da8-9622-4434-a287-eceff2c3b37e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"32450da8-9622-4434-a287-eceff2c3b37e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/32450da8-9622-4434-a287-eceff2c3b37e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"32450da8-9622-4434-a287-eceff2c3b37e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserDepartment",
+			"item": [
+				{
+					"name": "Conectar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"department_id\":\"7320fbe9-b335-406f-a18f-2b1ef6630de0\",\r\n    \"user_id\":\"b1c06de7-58ac-4510-981b-0c949a2ac513\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/conect/criarConexao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conect",
+								"criarConexao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Conexões",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/conect/listarConexoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conect",
+								"listarConexoes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
