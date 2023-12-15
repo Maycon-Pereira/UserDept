@@ -25,6 +25,7 @@ public class DepartmentService {
 
 		departmentEntity.setId(UUID.randomUUID().toString());
 		departmentEntity.setName(request.getName());
+		departmentEntity.setVisibility(request.getVisibility());
 
 		DepartmentEntity saved = departmentRepository.save(departmentEntity);
 
@@ -65,7 +66,23 @@ public class DepartmentService {
 		DepartmentEntity saved = departmentRepository.save(departmentEntity);
 		return saved;
 	}
-
+	
+	public void mPublic(String id) {
+		Optional<DepartmentEntity> procurado = departmentRepository.findById(id);
+		
+		DepartmentEntity departmentEntity = procurado.get();
+		departmentEntity.mPublic();
+		departmentRepository.save(departmentEntity);
+	}
+	
+	public void mPrivate(String id) {
+		Optional<DepartmentEntity> procurado = departmentRepository.findById(id);
+		
+		DepartmentEntity departmentEntity = procurado.get();
+		departmentEntity.mPrivate();
+		departmentRepository.save(departmentEntity);
+	}
+	
 	public DeletaDepartmentResponse removeDepartment(String id) {
 
 		DeletaDepartmentResponse deletaDepartmentResponse = new DeletaDepartmentResponse();

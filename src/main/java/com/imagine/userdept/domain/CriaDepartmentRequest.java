@@ -8,4 +8,6 @@ import lombok.Setter;
 public class CriaDepartmentRequest {
 
 	private String name;
+	
+	private Boolean visibility = Boolean.FALSE;
 }

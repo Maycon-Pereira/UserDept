@@ -20,4 +20,13 @@ public class DepartmentEntity {
 	private String id;
 	
 	private String name;
+	
+	private Boolean visibility = Boolean.FALSE;
+	
+	public void mPublic() {
+		setVisibility(false);
+	}
+	public void mPrivate() {
+		setVisibility(true);
+	}
 }
